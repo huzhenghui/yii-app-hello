@@ -55,6 +55,11 @@ $config = [
     'params' => $params,
 ];
 
+    $config['bootstrap'][] = 'hello';
+    $config['modules']['hello'] = [
+        'class' => 'huzhenghui\hello\Module',
+    ];
+
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
